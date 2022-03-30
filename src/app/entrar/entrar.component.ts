@@ -17,7 +17,7 @@ export class EntrarComponent implements OnInit {
 
     private auth: AuthService,
 
-    private router: Router
+    private route: Router
 
   ) { }
 
@@ -33,7 +33,7 @@ export class EntrarComponent implements OnInit {
         environment.nome = this.usuarioLogin.nome
         environment.foto = this.usuarioLogin.foto
         environment.id = this.usuarioLogin.id
-        this.router.navigate(['/inicio'])
+        this.route.navigate(['/inicio'])
       },
       error: erro => {
         if (erro.status == 401) {
