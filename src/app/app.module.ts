@@ -11,6 +11,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import {HttpClientModule} from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { InicioComponent } from './inicio/inicio.component';
+import { TemaComponent } from './tema/tema.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { InicioComponent } from './inicio/inicio.component';
     RodapeComponent,
     EntrarComponent,
     CadastrarComponent,
-    InicioComponent
+    InicioComponent,
+    TemaComponent
   ],
   imports: [
     BrowserModule,
