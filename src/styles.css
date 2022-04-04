@@ -3,6 +3,7 @@
 html
 {
   scroll-behavior: smooth;
+
 }
 
 .fs-54{
@@ -12,4 +13,8 @@ html
 
 .fs-18{
   font-size: 18pt;
+}
+
+div{
+  font-family: Century Gothic, sans-serif;
 }
