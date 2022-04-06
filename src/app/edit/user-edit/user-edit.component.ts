@@ -40,10 +40,17 @@ export class UserEditComponent implements OnInit {
     if (this.usuario.senha != this.confirmarSenha) {
       alert('As senhas estão incorretas! ❌')
     } else {
-      this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
+      this.authService.atualizarUser(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
         this.router.navigate(['/inicio'])
         alert('Usúario atualizado com sucesso! ✔')
+
+        environment.token = ''
+        environment.nome = ''
+        environment.foto = ''
+        environment.id = 0
+
+        this.router.navigate(['/entrar'])
       })
     }
 
