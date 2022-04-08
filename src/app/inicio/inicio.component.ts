@@ -35,6 +35,9 @@ export class InicioComponent implements OnInit {
 
   reverse = true
 
+  tituloPost: string
+
+  nomeTema: string
 
 
   constructor(
@@ -101,4 +104,26 @@ private alertas: AlertasService
     })
   }
 
+  findByTituloPostagem(){
+
+    if(this.tituloPost == ''){
+      this.getAllPostagens()
+
+    } else{
+    this.postagemService.getByTitutoPostagem(this.tituloPost).subscribe((resp: Postagem[])=> {
+      this.listaPostagens = resp
+    })
+  }
+  }
+
+  findByNomeTema(){
+    if(this.nomeTema == ''){
+      this.getAllTemas()
+    } else{
+      this.temaService.getByNomeTema(this.nomeTema).subscribe((resp: Tema[])=>{
+        this.listaTemas = resp
+      })
+    }
+
+  }
 }
