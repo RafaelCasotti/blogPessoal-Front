@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AlertasComponent } from './alertas/alertas.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
@@ -30,7 +31,9 @@ const routes: Routes = [
 
   {path:'postagem-delete/:id', component: PostagemDeleteComponent},
 
-  {path:'user-edit/:id', component: UserEditComponent}
+  {path:'user-edit/:id', component: UserEditComponent},
+
+  {path:'alertas', component: AlertasComponent},
 
 
 
